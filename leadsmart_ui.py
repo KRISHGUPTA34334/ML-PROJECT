@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import requests
 
+import os
+
+CLEARBIT_API_KEY = st.secrets["CLEARBIT_API_KEY"]
+HUNTER_API_KEY = st.secrets["HUNTER_API_KEY"]
+
 # ⛔ Replace with your actual API keys
 CLEARBIT_API_KEY = "your_clearbit_api_key"
 HUNTER_API_KEY = "your_hunter_api_key"
