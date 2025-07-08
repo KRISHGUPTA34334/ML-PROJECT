@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LeadScraper",
+  "version": "1.0",
+  "description": "Extract companies from Clutch or LinkedIn.",
+  "permissions": ["scripting", "tabs", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.clutch.co/*", "*://*.linkedin.com/*"],
+      "js": ["scraper.js"]
+    }
+  ]
+}
